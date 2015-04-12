@@ -1,16 +1,16 @@
 server:
-    port: 8080
+    port: 8081
 
 spring:
     profiles:
         active: dev
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
-        url: 
+        url:
         databaseName: StudentManagement
         serverName: localhost
         username: StudentManagement
-        password: 
+        password: StudentManagement
 
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL82Dialect
