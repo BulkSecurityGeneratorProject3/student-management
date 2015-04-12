@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "StudentManagement",
+    "packageName": "com.management.student",
+    "packageFolder": "com/management/student",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "fcccad5d6a9bbb45249421877e90baf655fb4996"
+  }
+}

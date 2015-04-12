@@ -1,2 +1,4 @@
-# student-management
-Just a JHipster app to hack on for managing student information. 
+README for StudentManagement
+==========================
+
+[![Build Status](https://travis-ci.org/CJTaylr/student-management.svg?branch=develop)](https://travis-ci.org/CJTaylr/student-management)
