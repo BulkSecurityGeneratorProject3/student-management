@@ -1,0 +1,39 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "FirstName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "FirstName",
+            "fieldNameUnderscored": "first_name",
+            "fieldInJavaBeanMethod": "FirstName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "LastName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastName",
+            "fieldNameUnderscored": "last_name",
+            "fieldInJavaBeanMethod": "LastName",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150412234738",
+    "pagination": "no",
+    "validation": true
+}

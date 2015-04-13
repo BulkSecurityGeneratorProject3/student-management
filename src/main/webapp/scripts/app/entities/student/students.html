@@ -1,0 +1,126 @@
+<div>
+
+    <h2 translate="studentmanagementApp.student.home.title">Student</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveStudentModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="studentmanagementApp.student.home.createLabel">Create a new Student</span>
+    </button>
+    <div class="modal fade" id="saveStudentModal" tabindex="-1" role="dialog" aria-labelledby="myStudentLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myStudentLabel" translate="studentmanagementApp.student.home.createOrEditLabel">Create or edit a Student</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="student.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="studentmanagementApp.student.FirstName">FirstName</label>
+                            <input type="text" class="form-control" name="FirstName"
+                                   ng-model="student.FirstName" required>
+
+                            <div ng-show="editForm.FirstName.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.FirstName.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="studentmanagementApp.student.LastName">LastName</label>
+                            <input type="text" class="form-control" name="LastName"
+                                   ng-model="student.LastName" required>
+
+                            <div ng-show="editForm.LastName.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.LastName.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteStudentConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(student.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="studentmanagementApp.student.delete.question" translate-values="{id: '{{student.id}}'}">Are you sure you want to delete this Student?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="studentmanagementApp.student.FirstName">FirstName</th>
+                    <th translate="studentmanagementApp.student.LastName">LastName</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td><a ui-sref="studentDetail({id:student.id})">{{student.id}}</a></td>
+                    <td>{{student.FirstName}}</td>
+                    <td>{{student.LastName}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="studentDetail({id:student.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(student.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(student.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
