@@ -3,7 +3,7 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "FirstName",
+            "fieldName": "firstName",
             "fieldType": "String",
             "fieldNameCapitalized": "FirstName",
             "fieldNameUnderscored": "first_name",
@@ -15,7 +15,7 @@
         },
         {
             "fieldId": 2,
-            "fieldName": "LastName",
+            "fieldName": "lastName",
             "fieldType": "String",
             "fieldNameCapitalized": "LastName",
             "fieldNameUnderscored": "last_name",
@@ -33,7 +33,7 @@
     "fieldsContainBigDecimal": false,
     "fieldsContainDateTime": false,
     "fieldsContainDate": false,
-    "changelogDate": "20150412234738",
+    "changelogDate": "20150414121210",
     "pagination": "no",
     "validation": true
 }

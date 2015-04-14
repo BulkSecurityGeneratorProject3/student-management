@@ -43,7 +43,7 @@ angular.module('studentmanagementApp')
         };
 
         $scope.clear = function () {
-            $scope.student = {FirstName: null, LastName: null, id: null};
+            $scope.student = {firstName: null, lastName: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
         };

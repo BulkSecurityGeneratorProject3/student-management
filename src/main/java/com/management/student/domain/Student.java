@@ -22,11 +22,12 @@ public class Student implements Serializable {
 
     @NotNull
     @Column(name = "first_name", nullable = false)
-    private String FirstName;
+
+    private String firstName;
 
     @NotNull
     @Column(name = "last_name", nullable = false)
-    private String LastName;
+    private String lastName;
 
     public Long getId() {
         return id;
@@ -37,19 +38,19 @@ public class Student implements Serializable {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
-    public void setFirstName(String FirstName) {
-        this.FirstName = FirstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
-    public void setLastName(String LastName) {
-        this.LastName = LastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
@@ -77,8 +78,8 @@ public class Student implements Serializable {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", FirstName='" + FirstName + "'" +
-                ", LastName='" + LastName + "'" +
+                ", firstName='" + firstName + "'" +
+                ", lastName='" + lastName + "'" +
                 '}';
     }
 }

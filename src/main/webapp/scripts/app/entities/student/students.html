@@ -24,25 +24,25 @@
                         </div>
 
                         <div class="form-group">
-                            <label translate="studentmanagementApp.student.FirstName">FirstName</label>
-                            <input type="text" class="form-control" name="FirstName"
-                                   ng-model="student.FirstName" required>
+                            <label translate="studentmanagementApp.student.firstName">FirstName</label>
+                            <input type="text" class="form-control" name="firstName"
+                                   ng-model="student.firstName" required>
 
-                            <div ng-show="editForm.FirstName.$invalid">
+                            <div ng-show="editForm.firstName.$invalid">
                                 <p class="help-block"
-                                   ng-show="editForm.FirstName.$error.required" translate="entity.validation.required">
+                                   ng-show="editForm.firstName.$error.required" translate="entity.validation.required">
                                     This field is required.
                                 </p>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label translate="studentmanagementApp.student.LastName">LastName</label>
-                            <input type="text" class="form-control" name="LastName"
-                                   ng-model="student.LastName" required>
+                            <label translate="studentmanagementApp.student.lastName">LastName</label>
+                            <input type="text" class="form-control" name="lastName"
+                                   ng-model="student.lastName" required>
 
-                            <div ng-show="editForm.LastName.$invalid">
+                            <div ng-show="editForm.lastName.$invalid">
                                 <p class="help-block"
-                                   ng-show="editForm.LastName.$error.required" translate="entity.validation.required">
+                                   ng-show="editForm.lastName.$error.required" translate="entity.validation.required">
                                     This field is required.
                                 </p>
                             </div>
@@ -92,16 +92,16 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th translate="studentmanagementApp.student.FirstName">FirstName</th>
-                    <th translate="studentmanagementApp.student.LastName">LastName</th>
+                    <th translate="studentmanagementApp.student.firstName">FirstName</th>
+                    <th translate="studentmanagementApp.student.lastName">LastName</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="student in students">
                     <td><a ui-sref="studentDetail({id:student.id})">{{student.id}}</a></td>
-                    <td>{{student.FirstName}}</td>
-                    <td>{{student.LastName}}</td>
+                    <td>{{student.firstName}}</td>
+                    <td>{{student.lastName}}</td>
                     <td>
                         <button type="submit"
                                 ui-sref="studentDetail({id:student.id})"

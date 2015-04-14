@@ -133,8 +133,8 @@ public class StudentResourceTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(student.getId().intValue())))
-                .andExpect(jsonPath("$.[*].FirstName").value(hasItem(DEFAULT_FIRST_NAME.toString())))
-                .andExpect(jsonPath("$.[*].LastName").value(hasItem(DEFAULT_LAST_NAME.toString())));
+                .andExpect(jsonPath("$.[*].firstName").value(hasItem(DEFAULT_FIRST_NAME.toString())))
+                .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME.toString())));
     }
 
     @Test
@@ -148,8 +148,8 @@ public class StudentResourceTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(student.getId().intValue()))
-            .andExpect(jsonPath("$.FirstName").value(DEFAULT_FIRST_NAME.toString()))
-            .andExpect(jsonPath("$.LastName").value(DEFAULT_LAST_NAME.toString()));
+            .andExpect(jsonPath("$.firstName").value(DEFAULT_FIRST_NAME.toString()))
+            .andExpect(jsonPath("$.lastName").value(DEFAULT_LAST_NAME.toString()));
     }
 
     @Test
@@ -165,7 +165,7 @@ public class StudentResourceTest {
     public void updateStudent() throws Exception {
         // Initialize the database
         studentRepository.saveAndFlush(student);
-		
+
 		int databaseSizeBeforeUpdate = studentRepository.findAll().size();
 
         // Update the student
@@ -189,7 +189,7 @@ public class StudentResourceTest {
     public void deleteStudent() throws Exception {
         // Initialize the database
         studentRepository.saveAndFlush(student);
-		
+
 		int databaseSizeBeforeDelete = studentRepository.findAll().size();
 
         // Get the student

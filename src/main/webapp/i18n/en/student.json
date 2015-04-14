@@ -12,8 +12,8 @@
             "detail": {
                 "title": "Student"
             },
-            "FirstName": "FirstName",
-            "LastName": "LastName"
+            "firstName": "FirstName",
+            "lastName": "LastName"
         }
     }
 }
