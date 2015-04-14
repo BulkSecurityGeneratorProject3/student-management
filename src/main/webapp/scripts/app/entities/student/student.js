@@ -3,8 +3,8 @@
 angular.module('studentmanagementApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('student', {
-                parent: 'entity',
+            .state('home', {
+                parent: 'site',
                 url: '/student',
                 data: {
                     roles: ['ROLE_USER'],
