@@ -11,15 +11,17 @@ What you'll need
 
 Getting Started 
 =========================
-- Requires Postgres Databased created 
--   Create database: `StudentManagement`
--   Create login role: `StudentManagement` with custom password 
--   Supply password in `resources/config/application-dev.yml` for `Spring: datasource: password:`
-
+- Configure Postgres Database 
+  - Create database: `StudentManagement`
+  - Create login role: `StudentManagement` with custom password (default password for testing `StudentManagement`)
+- Update `resources/config/application-dev.yml` 
+  - Supply password for `Spring: datasource: password:` (default password for testing `StudentManagement`)
+  - (optional) Change `server: port:` if desired (default 8081)
 
 Running the application 
 =========================
 - `mvn spring-boot:run`
+- Browse to either internal or external IP displayed in console 
 
 Tips and Tricks 
 ========================
